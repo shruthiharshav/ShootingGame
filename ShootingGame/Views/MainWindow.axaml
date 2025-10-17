@@ -24,6 +24,6 @@
             <Button Content="Skjuta" Width="80" Click="OnSkjutaClicked"/>
         </StackPanel>
 
-        <Button Content="Reset" Width="80" HorizontalAlignment="Center" Click="OnResetClicked"/>
+        <Button Content="PlayAgain" Width="80" HorizontalAlignment="Center" Click="OnResetClicked"/>
     </StackPanel>
 </Window>
