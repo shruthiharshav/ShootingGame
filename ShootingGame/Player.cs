@@ -1,35 +1,36 @@
-﻿
+﻿using System;
 
 namespace ShootingGame
 {
     internal class Player
     {
-        public int Bullet = 0;
-        public string Name;
-
-        public Player(string name) 
-        { 
+        public Player(string name)
+        {
             Name = name;
         }
 
-        public void Ladda()
+        public string Name { get; }
+
+        public int Bullets { get; private set; }
+
+        public void Load() => Bullets = Math.Min(Bullets + 1, 3);
+
+        public void Block()
         {
-            Bullet += 1;
+            // Nothing happens so i leave it empty
         }
 
-        public void Blocka()
+        public bool TryShoot()
         {
-            
-        }
-        public void Skjuta()
-        {
-            Bullet -= 1;
+            if (Bullets <= 0)
+            {
+                return false;
+            }
+
+            Bullets -= 1;
+            return true;
         }
 
-        public void Shotgun()
-        {
-            Console.WriteLine(Name + " have the shotgun and is the Winner!");
-        }
-
+        public bool HasShotgun => Bullets >= 3;
     }
 }

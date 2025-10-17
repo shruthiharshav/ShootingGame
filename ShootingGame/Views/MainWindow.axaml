@@ -1,0 +1,29 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ShootingGame.Views.MainWindow"
+        Width="320"
+        Height="280"
+        Title="Shooting Game">
+    <StackPanel Margin="16" Spacing="12">
+        <TextBlock Text="Shooting Game"
+                   FontSize="22"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock x:Name="PlayerBulletsText" Text="Player bullets: 0"/>
+        <TextBlock x:Name="ComputerBulletsText" Text="Computer bullets: 0"/>
+
+        <TextBlock x:Name="ResultText"
+                   Text="Choose an action to start."
+                   TextWrapping="Wrap"/>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="8">
+            <Button Content="Ladda" Width="80" Click="OnLaddaClicked"/>
+            <Button Content="Blocka" Width="80" Click="OnBlockaClicked"/>
+            <Button Content="Skjuta" Width="80" Click="OnSkjutaClicked"/>
+        </StackPanel>
+
+        <Button Content="Reset" Width="80" HorizontalAlignment="Center" Click="OnResetClicked"/>
+    </StackPanel>
+</Window>
